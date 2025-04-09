@@ -1,0 +1,931 @@
+/* ====================================
+   1. TIPOGRAFÍAS
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&display=swap');
+
+/* ====================================
+   2. VARIABLES
+==================================== */
+:root {
+  --neon-pink: #ff4f87;
+  --neon-purple: #a23bc1;
+  --neon-cyan: #5de6ff;
+
+  --font-base: 'Comfortaa', sans-serif;
+  --font-alt: 'Orbitron', sans-serif;
+  --font-extra: 'Saira Semi Condensed', sans-serif;
+
+  --bg-main: #000;
+  --text-main: #f4f4f4;
+}
+
+/* ====================================
+   3. RESET Y BASE
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  background: url('img/iluminux-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-main);
+  min-height: 100vh;
+  padding-top: 90px;
+  overflow-x: hidden;
+}
+
+/* ====================================
+   4. ANIMACIONES GLOBALES
+==================================== */
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(252, 176, 69, 0.9)); }
+  50% { filter: drop-shadow(0 0 20px rgba(252, 176, 69, 1)); }
+}
+
+@keyframes pulseSubtitle {
+  0%, 100% { text-shadow: 0 0 6px rgba(93, 230, 255, 0.4); }
+  50% { text-shadow: 0 0 12px rgba(93, 230, 255, 0.7); }
+}
+
+@keyframes pulseGlowFrame {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(162, 59, 193, 0.75)); }
+  50% { filter: drop-shadow(0 0 20px rgba(162, 59, 193, 1)); }
+}
+
+/* ====================================
+   5. UTILIDADES
+==================================== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ====================================
+   6. ELEMENTOS TRANSVERSALES
+==================================== */
+
+/* ====================================
+   7. TIPOGRAFÍA POR ELEMENTO
+==================================== */
+
+/* Títulos principales */
+h1 {
+  font-family: var(--font-alt); /* Orbitron */
+  font-size: 2.5rem;
+  color: var(--neon-pink);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Subtítulos */
+h2 {
+  font-family: var(--font-elegant); /* Cinzel */
+  font-size: 2rem;
+  color: var(--neon-cyan);
+  margin-bottom: 1.618remm;
+  text-align: left;
+}
+
+/* Texto general */
+body, p, li {
+  font-family: var(--font-base); /* Comfortaa */
+  font-size: 1rem;
+}
+
+/* Botones y acciones */
+.button, .action-buttons a, .contact-form button {
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  background-color: var(--neon-purple); /* #a23bc1 */
+  color: white;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.action-buttons a:hover,
+.contact-form button:hover {
+  background-color: var(--neon-pink);
+  transform: scale(1.05);
+}
+
+/* ====================================
+   8. INICIO (Bienvenida)
+==================================== */
+.bienvenida {
+  text-align: center;
+}
+
+.bienvenida-titulo {
+  font-family: var(--font-alt);
+  font-size: 2rem;
+  color: var(--neon-pink);
+  margin-top: 1rem;
+}
+
+.bienvenida-sub {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: var(--text-main);
+}
+
+.profile-pic {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* ====================================
+ 9. SOBRE MÍ
+==================================== */
+.sobre-mi-titulo {
+  font-family: var(--font-alt);
+  font-size: 2.5rem;
+  color: var(--neon-pink);
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  padding: 2rem;
+}
+
+.ux-banner {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 2rem auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(255, 79, 135, 0.3);
+}
+
+.sobre-mi-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.sobre-mi-texto {
+  flex: 1;
+  min-width: 280px;
+  line-height: 1.8;
+  color: var(--neon-pink);
+  font-size: 1rem;
+}
+
+.sobre-mi-texto .text-lumina {
+  color: var(--neon-pink);
+  font-weight: bold;
+}
+
+.sobre-mi-texto .text-iluminux {
+  color: var(--neon-cyan);
+  font-weight: bold;
+}
+
+.video-elevator {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-video {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ====================================
+   10. EXPERIENCIA
+==================================== */
+.experiencia-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.experience-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+}
+
+.experience-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.experience-year {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--neon-cyan);
+  min-width: 60px;
+}
+
+.experience-card h3 {
+  font-size: 1.1rem;
+  color: var(--neon-pink);
+  margin: 0;
+}
+
+.cargo {
+  font-size: 0.95rem;
+  color: #bf9bde;
+  margin-top: 0.2rem;
+}
+
+.experience-card ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.experience-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #dddddd;
+}
+
+
+/* ====================================
+   6. ELEMENTOS TRANSVERSALES (NAV, FOOTER, SOCIAL, ETC.)
+==================================== */
+
+/* NAVBAR */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-nav {
+  height: 60px;
+  filter: drop-shadow(0 0 10px rgba(252, 176, 69, 0.9));
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link,
+.nav-links li a {
+  font-family: var(--font-alt);
+  font-size: 0.95rem;
+  color: #fff8dc;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-links li a:hover {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px #5de6ff88;
+}
+
+.nav-link.active,
+.nav-links li a.active {
+  color: var(--neon-pink);
+  font-weight: bold;
+  text-shadow: 0 0 6px #ff4f9988;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-main);
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+  max-width: 100%;
+}
+
+/* ICONOS SOCIALES */
+.social-icons {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* ====================================
+   CORRECCIÓN: TIPOGRAFÍAS POR ELEMENTO
+==================================== */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: var(--neon-pink);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--neon-cyan);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+body, p, li {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+}
+
+/* ====================================
+   CORRECCIÓN: BOTONES (volver color base rosa)
+==================================== */
+.button,
+.action-buttons a,
+.contact-form button {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  background-color: var(--neon-pink);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.action-buttons a:hover,
+.contact-form button:hover {
+  background-color: var(--neon-purple);
+  transform: scale(1.05);
+}
+
+/* ====================================
+   CORRECCIÓN: CONTENEDORES TRANSVERSALES
+==================================== */
+.section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(252, 176, 69, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ====================================
+   ESTÉTICA ARMÓNICA Y ESPACIADO
+==================================== */
+
+/* Ajustes generales de secciones */
+.section {
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+/* Título principal */
+.bienvenida-titulo {
+  font-size: 2.618rem; /* proporción áurea */
+  margin-bottom: 1.5rem;
+}
+
+/* Subtítulo principal */
+.bienvenida-sub {
+  font-size: 1.618rem;
+  margin-bottom: 2rem;
+}
+
+/* Acción principal */
+.action-buttons {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.action-buttons a,
+.contact-form button {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+}
+
+/* Íconos sociales */
+.social-icons {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1.2rem;
+}
+
+.social-icons img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Footer */
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* ====================================
+   RESPONSIVE AJUSTES
+==================================== */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem;
+  }
+
+  .bienvenida-titulo {
+    font-size: 2rem;
+  }
+
+  .bienvenida-sub {
+    font-size: 1.3rem;
+  }
+
+  .action-buttons a,
+  .contact-form button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ====================================
+   GLOW ANIMADO PARA TÍTULOS
+==================================== */
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 6px var(--neon-pink),
+      0 0 12px var(--neon-pink),
+      0 0 20px rgba(255, 79, 135, 0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 10px var(--neon-pink),
+      0 0 20px var(--neon-pink),
+      0 0 30px rgba(255, 79, 135, 0.8);
+  }
+}
+
+.bienvenida-titulo {
+  animation: neonGlow 3.5s ease-in-out infinite;
+}
+
+/* ====================================
+   PÁRRAFO INTERMEDIO MÁS DELGADO
+==================================== */
+.bienvenida-sub {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* ====================================
+   CUERPO DE TEXTO MÁS COMPACTO
+==================================== */
+body, p, li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ====================================
+   GLOW ILUMINUX (LOGO / IMAGEN CENTRAL)
+==================================== */
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--neon-cyan));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--neon-cyan));
+  }
+}
+
+.logo-nav,
+.bienvenida .profile-pic {
+  animation: pulseGlowLogo 3.5s ease-in-out infinite;
+}
+
+/* Removemos glow del H1 */
+.bienvenida-titulo {
+  animation: none;
+  text-shadow: none;
+}
+
+/* ====================================
+   AJUSTE: GLOW PURPURA/ROSA EN LOGO
+==================================== */
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--neon-purple));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--neon-pink));
+  }
+}
+
+.logo-nav,
+.bienvenida img {
+  animation: pulseGlowLogo 3.5s ease-in-out infinite;
+}
+
+/* ====================================
+   AJUSTE: ESPACIADO ENTRE H1 Y H2
+==================================== */
+.bienvenida-titulo {
+  margin-bottom: 0.5rem;
+}
+
+.bienvenida-sub {
+  margin-top: 0.5rem;
+}
+
+/* ====================================
+   AJUSTE: GLOW SOLO PÚRPURA
+==================================== */
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--neon-purple));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--neon-purple));
+  }
+}
+
+/* ====================================
+   AJUSTE: REDUCCIÓN DE ESPACIADO ENTRE TÍTULOS
+==================================== */
+.bienvenida-titulo {
+  margin-bottom: 0.2rem;
+}
+
+.bienvenida-sub {
+  margin-top: 0.2rem;
+}
+
+/* ====================================
+   REDUCCIÓN FINAL DE ESPACIO H1-H2
+==================================== */
+.bienvenida-titulo {
+  margin-bottom: 0.1rem;
+}
+
+.bienvenida-sub {
+  margin-top: 0.1rem;
+}
+
+/* ====================================
+   AJUSTE FINAL ENTRE H1-H2 (padding/margin)
+==================================== */
+.bienvenida-titulo {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bienvenida-sub {
+  margin-top: 0.1rem;
+  padding-top: 0;
+}
+
+/* ====================================
+   GLOW MIXTO (PURPLE + PINK) EN IMAGEN ILUMINUX
+==================================== */
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--neon-purple)) drop-shadow(0 0 5px var(--neon-pink));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--neon-purple)) drop-shadow(0 0 10px var(--neon-pink));
+  }
+}
+
+/* ====================================
+   AJUSTE: MÁS VIOLETA EN GLOW ILUMINUX
+==================================== */
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 12px var(--neon-purple))
+      drop-shadow(0 0 8px var(--neon-pink));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 24px var(--neon-purple))
+      drop-shadow(0 0 14px var(--neon-pink));
+  }
+}
+
+/* ====================================
+   ESPACIO ENTRE IMAGEN Y H1 (suave)
+==================================== */
+.bienvenida img {
+  margin-bottom: 1rem;
+}
+
+/* ====================================
+   SOBRE MÍ - AJUSTES PERSONALIZADOS
+==================================== */
+.sobre-mi-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.sobre-mi-layout h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.618rem;
+  color: var(--neon-pink);
+  margin-bottom: 1rem;
+}
+
+.sobre-mi-layout p {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Imagen al ancho del video responsive */
+.ux-banner {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(255, 79, 135, 0.3);
+}
+
+/* ===========================
+   FORMACIÓN - ESTILOS ESPECÍFICOS
+=========================== */
+
+h1.sobre-mi-titulo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #ff4f87;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.educacion-subseccion h2 {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 1.8rem;
+  color: #5de6ff;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.education-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.education-year {
+  font-weight: bold;
+  color: #5de6ff;
+  min-width: 70px;
+  font-size: 1.05rem;
+}
+
+.education-card h4 {
+  margin: 0;
+  color: var(--neon-pink);
+  font-size: 1.1rem;
+}
+
+.programa {
+  color: #bf9bde;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.cert-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.cert-list li {
+  color: #dddddd;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   TECH STACK
+================================ */
+
+body.tech-stack {
+  padding-top: 70px;
+}
+
+#tech-stack {
+  margin-top: 2rem;
+}
+
+#tech-stack h3 {
+  font-family: var(--font-elegant);
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#tech-stack ul {
+  list-style: square inside;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#tech-stack li {
+  font-size: 0.95rem;
+  color: #dddddd;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-base);
+}
+
+.section .tech-intro {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #f4f4f4;
+}
+
+/* =============================
+   CONTACTO
+============================= */
+body.contacto {
+  padding-top: 70px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: var(--neon-cyan);
+  font-family: var(--font-elegant);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-base);
+  background-color: #222;
+  color: #fff;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff; /* <-- antes era #222 */
+  color: #000;            /* texto negro para contraste */
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: var(--font-base);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+
+
+.contact-form button {
+  background-color: var(--neon-pink);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: var(--font-alt);
+}
+
+.contact-form button:hover {
+  background-color: #ff6ea1;
+}
+
+/* Calendly */
+.calendly-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.calendly-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendly-link a:hover {
+  background-color: rgba(93, 230, 255, 0.15);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Calendly icon optional if added */
+.calendly-link a::before {
+  content: "📅";
+  font-size: 1.2rem;
+}

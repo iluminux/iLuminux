@@ -603,7 +603,7 @@ footer {
 .pagina-tech-stack .tech-stack-titulo {
   font-family: var(--font-alt); /* Orbitron */
   font-size: 2.618rem;
-  text-align: justify;
+  text-align: center;
   color: var(--neon-pink);
   margin-bottom: 1.5rem;
 }
@@ -691,7 +691,7 @@ footer {
   padding: 2.5rem;
   color: var(--text-main);
   max-width: 900px;
-  margin: 2rem auto; /* ← antes decía: margin: 0 auto */
+  margin: 0 auto;
 }
 
 .pagina-contacto h1.sobre-mi-titulo {

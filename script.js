@@ -14,6 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==========================
+  // MENÚ HAMBURGUESA (MÓVIL)
+  // ==========================
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const navLinksContainer = document.getElementById("nav-links");
+
+  if (hamburgerBtn && navLinksContainer) {
+    hamburgerBtn.addEventListener("click", () => {
+      navLinksContainer.classList.toggle("active");
+    });
+  }
+
+  // ==========================
   // SCROLL REVEAL
   // ==========================
   function revealOnScroll() {
@@ -78,3 +90,4 @@ document.addEventListener("DOMContentLoaded", () => {
     activateNavLink();
   }
 });
+

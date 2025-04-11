@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>iLuminux - Karina Hidalgo</title>
 
-  <!-- Estilos y fuentes -->
+  <!-- Estilos y Favicon -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon" />
 </head>
 
-<body>
+<body class="pagina-inicio">
   <!-- Navegación -->
   <nav class="nav-container">
     <a href="index.html" class="logo-link">
-      <img src="img/iluminux-logo-temp.png" alt="Logo de iLuminux" class="logo-nav" />
+      <img src="img/iluminux-logo-temp.png" alt="Inicio" class="logo-nav" />
     </a>
-    <ul class="nav-links">
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="nav-link active">Inicio</a></li>
       <li><a href="sobre-mi.html" class="nav-link">Sobre mí</a></li>
       <li><a href="experiencia.html" class="nav-link">Experiencia</a></li>
@@ -30,36 +35,39 @@
   <!-- Contenido principal -->
   <main>
     <section id="inicio" class="section">
-      <div class="bienvenida">
+      <div class="bienvenida reveal">
         <img src="img/iluminux.png" alt="Imagen principal del laboratorio iLuminux" class="profile-pic glow-frame" />
 
-        <h1 class="bienvenida-titulo">Bienvenid@ a iLuminux</h1><h2 class="subtitulo">Laboratorio de alquimia digital</h2>
+        <h1 class="bienvenida-titulo">Bienvenid@ a iLuminux</h1>
+        <h2 class="subtitulo">Laboratorio de Alquimia Digital</h2>
 
         <p class="bienvenida-sub">
-          Aquí se experimenta mezclando investigación estratégica, diseño y magia tecnológica.<strong> ¡Transmutamos ideas en experiencias brillantes!</strong>
-        </p>
+          El lugar donde la ciencia, el diseño y la tecnología convergen.
+        </br><strong>¡Transmutamos ideas y proyectos en experiencias deslumbrantes!</strong></p>
 
         <div class="action-buttons">
-          <a href="https://www.canva.com/design/DAGb-f0-3fU/26zP9yD5BQtIvs1-HWpCGA/view" target="_blank">Descargar CV</a>
-          <a href="https://www.canva.com/design/DAF_7EumUlM/EcK4MUuRJTZLD8BgGm7dDw/view" target="_blank">Ver Portafolio</a>
+          <a href="https://www.canva.com/design/DAGb-f0-3fU/26zP9yD5BQtIvs1-HWpCGA/view" target="_blank" class="button">Descargar CV</a>
+          <a href="https://www.canva.com/design/DAF_7EumUlM/EcK4MUuRJTZLD8BgGm7dDw/view" target="_blank" class="button">Ver Portafolio</a>
         </div>
 
         <div class="social-icons">
-          <a href="https://www.behance.net/iLuminux" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
-          <a href="https://www.linkedin.com/in/iLuminux/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-          <a href="https://www.facebook.com/iluminux.cl" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
-          <a href="https://www.instagram.com/iLuminux.cl" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
-          <a href="https://www.youtube.com/@iLuminux_cl" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
-          <a href="https://github.com/iLuminux" target="_blank"><img src="img/github.svg" alt="GitHub"></a>
+          <a href="https://www.behance.net/iLuminux" target="_blank"><img src="img/behance.svg" alt="Behance" /></a>
+          <a href="https://www.linkedin.com/in/iLuminux/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn" /></a>
+          <a href="https://www.facebook.com/iluminux.cl" target="_blank"><img src="img/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/iLuminux.cl" target="_blank"><img src="img/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/@iLuminux_cl" target="_blank"><img src="img/youtube.svg" alt="YouTube" /></a>
+          <a href="https://github.com/iLuminux" target="_blank"><img src="img/github.svg" alt="GitHub" /></a>
         </div>
       </div>
     </section>
   </main>
-</body>
 
   <!-- Footer -->
   <footer>
     <p>✦ Hecho con el poder del prisma estelar ✦ © iLuminux 2025</p>
   </footer>
-</html>
 
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

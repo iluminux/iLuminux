@@ -1,26 +1,25 @@
 /* ====================================
-   1. TIPOGRAFÍAS
+   TIPOGRAFÍAS E IMPORTS
 ==================================== */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&family=Cinzel:wght@600&display=swap');
 
 /* ====================================
-   2. VARIABLES
+   VARIABLES
 ==================================== */
 :root {
   --neon-pink: #ff4f87;
   --neon-purple: #a23bc1;
   --neon-cyan: #5de6ff;
-
+  --text-main: #f4f4f4;
+  --bg-main: #000;
   --font-base: 'Comfortaa', sans-serif;
   --font-alt: 'Orbitron', sans-serif;
   --font-extra: 'Saira Semi Condensed', sans-serif;
-
-  --bg-main: #000;
-  --text-main: #f4f4f4;
+  --font-elegant: 'Cinzel', serif;
 }
 
 /* ====================================
-   3. RESET Y BASE
+   RESET Y BASE
 ==================================== */
 * {
   margin: 0;
@@ -37,260 +36,36 @@ body {
   min-height: 100vh;
   padding-top: 90px;
   overflow-x: hidden;
+  font-size: 1rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* ====================================
-   4. ANIMACIONES GLOBALES
+   TIPOGRAFÍA GENERAL
 ==================================== */
-@keyframes pulseGlow {
-  0%, 100% { filter: drop-shadow(0 0 10px rgba(252, 176, 69, 0.9)); }
-  50% { filter: drop-shadow(0 0 20px rgba(252, 176, 69, 1)); }
-}
-
-@keyframes pulseSubtitle {
-  0%, 100% { text-shadow: 0 0 6px rgba(93, 230, 255, 0.4); }
-  50% { text-shadow: 0 0 12px rgba(93, 230, 255, 0.7); }
-}
-
-@keyframes pulseGlowFrame {
-  0%, 100% { filter: drop-shadow(0 0 10px rgba(162, 59, 193, 0.75)); }
-  50% { filter: drop-shadow(0 0 20px rgba(162, 59, 193, 1)); }
-}
-
-/* ====================================
-   5. UTILIDADES
-==================================== */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* ====================================
-   6. ELEMENTOS TRANSVERSALES
-==================================== */
-
-/* ====================================
-   7. TIPOGRAFÍA POR ELEMENTO
-==================================== */
-
-/* Títulos principales */
 h1 {
-  font-family: var(--font-alt); /* Orbitron */
+  font-family: var(--font-alt);
   font-size: 2.5rem;
   color: var(--neon-pink);
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* Subtítulos */
 h2 {
-  font-family: var(--font-elegant); /* Cinzel */
+  font-family: var(--font-elegant);
   font-size: 2rem;
   color: var(--neon-cyan);
-  margin-bottom: 1.618remm;
-  text-align: left;
-}
-
-/* Texto general */
-body, p, li {
-  font-family: var(--font-base); /* Comfortaa */
-  font-size: 1rem;
-}
-
-/* Botones y acciones */
-.button, .action-buttons a, .contact-form button {
-  font-family: var(--font-extra); /* Saira Semi Condensed */
-  background-color: var(--neon-purple); /* #a23bc1 */
-  color: white;
-  padding: 0.7rem 1.5rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 25px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button:hover,
-.action-buttons a:hover,
-.contact-form button:hover {
-  background-color: var(--neon-pink);
-  transform: scale(1.05);
-}
-
-/* ====================================
-   8. INICIO (Bienvenida)
-==================================== */
-.bienvenida {
   text-align: center;
-}
-
-.bienvenida-titulo {
-  font-family: var(--font-alt);
-  font-size: 2rem;
-  color: var(--neon-pink);
-  margin-top: 1rem;
-}
-
-.bienvenida-sub {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-  color: var(--text-main);
-}
-
-.profile-pic {
-  width: 180px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
+  margin-bottom: 1rem;
 }
 
 /* ====================================
- 9. SOBRE MÍ
+   NAVBAR Y MENÚ
 ==================================== */
-.sobre-mi-titulo {
-  font-family: var(--font-alt);
-  font-size: 2.5rem;
-  color: var(--neon-pink);
-  text-align: left;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.section {
-  padding: 2rem;
-}
-
-.ux-banner {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto 2rem auto;
-  display: block;
-  box-shadow: 0 0 15px rgba(255, 79, 135, 0.3);
-}
-
-.sobre-mi-layout {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-
-.sobre-mi-texto {
-  flex: 1;
-  min-width: 280px;
-  line-height: 1.8;
-  color: var(--neon-pink);
-  font-size: 1rem;
-}
-
-.sobre-mi-texto .text-lumina {
-  color: var(--neon-pink);
-  font-weight: bold;
-}
-
-.sobre-mi-texto .text-iluminux {
-  color: var(--neon-cyan);
-  font-weight: bold;
-}
-
-.video-elevator {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-}
-
-.responsive-video {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: none;
-}
-
-.responsive-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ====================================
-   10. EXPERIENCIA
-==================================== */
-.experiencia-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.experience-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
-}
-
-.experience-header {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-}
-
-.experience-year {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--neon-cyan);
-  min-width: 60px;
-}
-
-.experience-card h3 {
-  font-size: 1.1rem;
-  color: var(--neon-pink);
-  margin: 0;
-}
-
-.cargo {
-  font-size: 0.95rem;
-  color: #bf9bde;
-  margin-top: 0.2rem;
-}
-
-.experience-card ul {
-  margin-top: 0.5rem;
-  padding-left: 1.2rem;
-}
-
-.experience-card li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-  color: #dddddd;
-}
-
-
-/* ====================================
-   6. ELEMENTOS TRANSVERSALES (NAV, FOOTER, SOCIAL, ETC.)
-==================================== */
-
-/* NAVBAR */
 .nav-container {
   position: fixed;
   top: 0;
@@ -308,17 +83,14 @@ body, p, li {
 
 .logo-nav {
   height: 60px;
-  filter: drop-shadow(0 0 10px rgba(252, 176, 69, 0.9));
-  animation: pulseGlow 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px var(--neon-purple)) drop-shadow(0 0 8px var(--neon-pink));
+  animation: pulseGlowLogo 3.5s ease-in-out infinite;
 }
 
-/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-link,
@@ -327,13 +99,14 @@ body, p, li {
   font-size: 0.95rem;
   color: #fff8dc;
   text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-links li a:hover {
   color: var(--neon-cyan);
   text-shadow: 0 0 5px #5de6ff88;
+  transform: scale(1.05);
 }
 
 .nav-link.active,
@@ -343,87 +116,70 @@ body, p, li {
   text-shadow: 0 0 6px #ff4f9988;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--text-main);
-  font-family: var(--font-base);
-  font-size: 0.9rem;
-  max-width: 100%;
-}
-
-/* ICONOS SOCIALES */
-.social-icons {
-  text-align: center;
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-icons img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.1);
-}
-
-/* ====================================
-   CORRECCIÓN: TIPOGRAFÍAS POR ELEMENTO
-==================================== */
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
+.nav-links a.activo {
   color: var(--neon-pink);
-  text-align: center;
-  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px #ff4f9988;
 }
 
-h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2rem;
-  color: var(--neon-cyan);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-body, p, li {
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 1rem;
-}
-
-/* ====================================
-   CORRECCIÓN: BOTONES (volver color base rosa)
-==================================== */
-.button,
-.action-buttons a,
-.contact-form button {
-  font-family: 'Saira Semi Condensed', sans-serif;
-  background-color: var(--neon-pink);
-  color: white;
-  padding: 0.7rem 1.5rem;
-  margin: 0.5rem;
+.hamburger {
+  display: none;
+  background: none;
   border: none;
-  border-radius: 25px;
-  text-decoration: none;
+  color: var(--neon-pink);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
-.button:hover,
-.action-buttons a:hover,
-.contact-form button:hover {
-  background-color: var(--neon-purple);
-  transform: scale(1.05);
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.85));
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+@keyframes pulseGlowLogo {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--neon-purple)) drop-shadow(0 0 6px var(--neon-pink));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--neon-pink)) drop-shadow(0 0 10px var(--neon-purple));
+  }
+}
+
+.logo-nav {
+  animation: pulseGlowLogo 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px var(--neon-pink)); /* fallback inicial */
 }
 
 /* ====================================
-   CORRECCIÓN: CONTENEDORES TRANSVERSALES
+   ELEMENTOS GLOBALES Y CONTENEDORES
 ==================================== */
 .section {
   max-width: 1000px;
@@ -440,492 +196,607 @@ body, p, li {
   padding: 0 1rem;
 }
 
-/* ====================================
-   ESTÉTICA ARMÓNICA Y ESPACIADO
-==================================== */
-
-/* Ajustes generales de secciones */
-.section {
-  padding: 2rem;
-  border-radius: 20px;
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  max-width: 100%;
 }
 
-/* Título principal */
-.bienvenida-titulo {
-  font-size: 2.618rem; /* proporción áurea */
-  margin-bottom: 1.5rem;
-}
-
-/* Subtítulo principal */
-.bienvenida-sub {
-  font-size: 1.618rem;
-  margin-bottom: 2rem;
-}
-
-/* Acción principal */
-.action-buttons {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.action-buttons a,
-.contact-form button {
-  font-size: 1rem;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-}
-
-/* Íconos sociales */
 .social-icons {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
   gap: 1.2rem;
 }
 
 .social-icons img {
   width: 36px;
   height: 36px;
+  transition: transform 0.3s ease;
 }
 
-/* Footer */
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-/* ====================================
-   RESPONSIVE AJUSTES
-==================================== */
-@media (max-width: 768px) {
-  .section {
-    padding: 2rem;
-  }
-
-  .bienvenida-titulo {
-    font-size: 2rem;
-  }
-
-  .bienvenida-sub {
-    font-size: 1.3rem;
-  }
-
-  .action-buttons a,
-  .contact-form button {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.95rem;
-  }
-
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
+.social-icons a:hover img {
+  transform: scale(1.1);
 }
 
 /* ====================================
-   GLOW ANIMADO PARA TÍTULOS
+   ESTILOS PARTICULARES: PÁGINA DE INICIO
 ==================================== */
-@keyframes neonGlow {
-  0%, 100% {
-    text-shadow:
-      0 0 6px var(--neon-pink),
-      0 0 12px var(--neon-pink),
-      0 0 20px rgba(255, 79, 135, 0.6);
-  }
-  50% {
-    text-shadow:
-      0 0 10px var(--neon-pink),
-      0 0 20px var(--neon-pink),
-      0 0 30px rgba(255, 79, 135, 0.8);
-  }
-}
-
-.bienvenida-titulo {
-  animation: neonGlow 3.5s ease-in-out infinite;
-}
-
-/* ====================================
-   PÁRRAFO INTERMEDIO MÁS DELGADO
-==================================== */
-.bienvenida-sub {
-  font-size: 1rem;
-  line-height: 1.4;
-  max-width: 700px;
-  margin: 1rem auto 2rem;
-  color: var(--text-main);
+.bienvenida {
   text-align: center;
+  padding: 2rem;
 }
 
-/* ====================================
-   CUERPO DE TEXTO MÁS COMPACTO
-==================================== */
-body, p, li {
-  font-size: 0.95rem;
-  line-height: 1.6;
+.profile-pic {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border: none;
+  background: transparent;
+  filter: 
+  drop-shadow(0 0 15px rgba(255, 79, 135, 0.5))
+  drop-shadow(0 0 30px rgba(255, 79, 135, 0.3))
+  drop-shadow(0 0 45px rgba(255, 79, 135, 0.2));
+  transition: transform 0.3s ease;
 }
 
-/* ====================================
-   GLOW ILUMINUX (LOGO / IMAGEN CENTRAL)
-==================================== */
-@keyframes pulseGlowLogo {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px var(--neon-cyan));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px var(--neon-cyan));
-  }
-}
-
-.logo-nav,
-.bienvenida .profile-pic {
-  animation: pulseGlowLogo 3.5s ease-in-out infinite;
-}
-
-/* Removemos glow del H1 */
 .bienvenida-titulo {
-  animation: none;
-  text-shadow: none;
-}
-
-/* ====================================
-   AJUSTE: GLOW PURPURA/ROSA EN LOGO
-==================================== */
-@keyframes pulseGlowLogo {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px var(--neon-purple));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px var(--neon-pink));
-  }
-}
-
-.logo-nav,
-.bienvenida img {
-  animation: pulseGlowLogo 3.5s ease-in-out infinite;
-}
-
-/* ====================================
-   AJUSTE: ESPACIADO ENTRE H1 Y H2
-==================================== */
-.bienvenida-titulo {
+  font-family: var(--font-alt);
+  font-size: 2.5rem;
+  color: var(--neon-pink);
   margin-bottom: 0.5rem;
 }
 
+.bienvenida h2 {
+  font-family: var(--font-elegant);
+  font-size: 1.618rem;
+  color: var(--neon-cyan);
+  margin-bottom: 1rem;
+}
+
 .bienvenida-sub {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.bienvenida p {
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.action-buttons a {
+  background-color: var(--neon-pink);
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  border-radius: 6px;
+  font-family: var(--font-extra);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 79, 135, 0.6);
+}
+
+.action-buttons a:hover {
+  background-color: var(--neon-purple);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(162, 59, 193, 0.7);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px var(--neon-purple)) drop-shadow(0 0 8px var(--neon-pink));
+  }
+  50% {
+    filter: drop-shadow(0 0 24px var(--neon-purple)) drop-shadow(0 0 14px var(--neon-pink));
+  }
+}
+
+.profile-pic.glow-animated {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ====================================
+   ESTILOS PARTICULARES: SOBRE MÍ
+==================================== */
+.pagina-sobre-mi .section {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 40px rgba(255, 79, 135, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-main);
+}
+
+.pagina-sobre-mi h1 {
+  font-family: var(--font-alt);
+  font-size: 2.618rem;
+  text-align: justify;
+  color: var(--neon-pink);
+  margin-bottom: 1.2rem;
+}
+
+.pagina-sobre-mi p {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.pagina-sobre-mi .ux-banner {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 79, 135, 0.2);
+}
+
+/* Frase final centrada */
+.frase-final {
+  text-align: center !important;  /* ← esto fuerza el centrado */
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+/* Diseño del texto de proceso */
+.design-thinking-flow {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 79, 135, 0.5); /* translúcido suave */
+}
+
+/* Video responsive */
+.pagina-sobre-mi .video-elevator {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.responsive-video {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.responsive-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ====================================
+   ESTILOS PARTICULARES: PÁGINA DE EXPERIENCIA
+==================================== */
+.pagina-experiencia .section {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 40px rgba(255, 79, 135, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-main);
+}
+
+.pagina-experiencia h1.sobre-mi-titulo {
+  font-family: var(--font-alt); /* Orbitron */
+  font-size: 2.618rem;
+  text-align: justify;
+  color: var(--neon-pink);
+  margin-bottom: 2rem;
+}
+
+.experience-card {
+  background-color:rgba(89, 33, 71, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 25px rgba(255, 79, 135, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Encabezado con año, empresa y cargo */
+.experience-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Año */
+.experience-year {
+  font-family: var(--font-alt); /* Orbitron */
+  font-size: 1.2rem;
+  color: #fff8dc;
+  min-width: 90px;
+  text-align: justify;
+}
+
+/* Empresa */
+.experience-header h4 {
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--neon-cyan);
+}
+
+/* Cargo */
+.experience-header .cargo {
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  font-size: 1.2rem;
+  color: var(--neon-pink);
+  margin-top: 0.2rem;
+}
+
+/* Lista de responsabilidades */
+.experience-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
   margin-top: 0.5rem;
 }
 
-/* ====================================
-   AJUSTE: GLOW SOLO PÚRPURA
-==================================== */
-@keyframes pulseGlowLogo {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px var(--neon-purple));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px var(--neon-purple));
-  }
-}
-
-/* ====================================
-   AJUSTE: REDUCCIÓN DE ESPACIADO ENTRE TÍTULOS
-==================================== */
-.bienvenida-titulo {
-  margin-bottom: 0.2rem;
-}
-
-.bienvenida-sub {
-  margin-top: 0.2rem;
-}
-
-/* ====================================
-   REDUCCIÓN FINAL DE ESPACIO H1-H2
-==================================== */
-.bienvenida-titulo {
-  margin-bottom: 0.1rem;
-}
-
-.bienvenida-sub {
-  margin-top: 0.1rem;
-}
-
-/* ====================================
-   AJUSTE FINAL ENTRE H1-H2 (padding/margin)
-==================================== */
-.bienvenida-titulo {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.bienvenida-sub {
-  margin-top: 0.1rem;
-  padding-top: 0;
-}
-
-/* ====================================
-   GLOW MIXTO (PURPLE + PINK) EN IMAGEN ILUMINUX
-==================================== */
-@keyframes pulseGlowLogo {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px var(--neon-purple)) drop-shadow(0 0 5px var(--neon-pink));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px var(--neon-purple)) drop-shadow(0 0 10px var(--neon-pink));
-  }
-}
-
-/* ====================================
-   AJUSTE: MÁS VIOLETA EN GLOW ILUMINUX
-==================================== */
-@keyframes pulseGlowLogo {
-  0%, 100% {
-    filter:
-      drop-shadow(0 0 12px var(--neon-purple))
-      drop-shadow(0 0 8px var(--neon-pink));
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 24px var(--neon-purple))
-      drop-shadow(0 0 14px var(--neon-pink));
-  }
-}
-
-/* ====================================
-   ESPACIO ENTRE IMAGEN Y H1 (suave)
-==================================== */
-.bienvenida img {
-  margin-bottom: 1rem;
-}
-
-/* ====================================
-   SOBRE MÍ - AJUSTES PERSONALIZADOS
-==================================== */
-.sobre-mi-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.sobre-mi-layout h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.618rem;
-  color: var(--neon-pink);
-  margin-bottom: 1rem;
-}
-
-.sobre-mi-layout p {
-  font-family: 'Comfortaa', sans-serif;
+.experience-card li {
+  font-family: var(--font-base); /* Comfortaa */
   font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: left;
 }
 
-/* Imagen al ancho del video responsive */
-.ux-banner {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto;
-  display: block;
-  box-shadow: 0 0 15px rgba(255, 79, 135, 0.3);
+/* ====================================
+   ESTILOS PARTICULARES: PÁGINA DE FORMACIÓN
+==================================== */
+
+.pagina-formacion .section {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 40px rgba(255, 79, 135, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-main);
 }
 
-/* ===========================
-   FORMACIÓN - ESTILOS ESPECÍFICOS
-=========================== */
-
-h1.sobre-mi-titulo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: #ff4f87;
-  margin-bottom: 2rem;
-  text-align: left;
+/* Título principal */
+.pagina-formacion h1.sobre-mi-titulo {
+  font-family: var(--font-alt);
+  font-size: 2.618rem;
+  text-align: justify;
+  color: var(--neon-pink);
+  margin-bottom: 2.5rem;
 }
 
-.educacion-subseccion h2 {
-  font-family: 'Cinzel', sans-serif;
-  font-size: 1.8rem;
-  color: #5de6ff;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+/* Subtítulos */
+.pagina-formacion h2 {
+  font-family: var(--font-elegant);
+  font-size: 2rem;
+  text-align: justify;
+  color: var(--neon-cyan);
+  margin: 2.5rem 0 1.5rem;
 }
 
+/* Tarjeta de educación */
 .education-card {
   display: flex;
-  gap: 1rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background-color: rgba(89, 33, 71, 0.3); /* tu color original */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* tu borde original */
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 25px rgba(255, 79, 135, 0.08);
 }
 
+/* Año */
 .education-year {
-  font-weight: bold;
-  color: #5de6ff;
-  min-width: 70px;
-  font-size: 1.05rem;
+  font-family: var(--font-alt);
+  font-size: 1.2rem;
+  color: #fff8dc;
+  min-width: 90px;
+  text-align: justify;
+  line-height: 1.4;
 }
 
+/* Institución */
 .education-card h4 {
+  font-family: var(--font-extra);
+  font-size: 1.25rem;
   margin: 0;
   color: var(--neon-pink);
-  font-size: 1.1rem;
 }
 
-.programa {
-  color: #bf9bde;
-  font-size: 0.95rem;
+/* Nombre del programa */
+.education-card .programa {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  color: #f0f0f0;
   margin-top: 0.2rem;
+  line-height: 1.6;
 }
 
+.pagina-formacion .programa {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-top: 0.25rem;
+  line-height: 1.6;
+}
+
+/* Secciones de lista (Certificaciones y Capacitaciones) */
 .cert-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.cert-list li {
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.cert-list li::before {
+  content: "🎖️";
+  position: absolute;
+  left: 0;
+  font-size: 0.95rem;
+  color: var(--neon-pink);
+}
+
+/* Estilo especial solo para la lista de "Capacitaciones" */
+.pagina-formacion .educacion-subseccion:last-of-type .cert-list {
   list-style-type: disc;
   padding-left: 1.5rem;
 }
 
-.cert-list li {
-  color: #dddddd;
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-  font-size: 0.95rem;
+.pagina-formacion .educacion-subseccion:last-of-type .cert-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
 }
 
-/* ================================
-   TECH STACK
-================================ */
-
-body.tech-stack {
-  padding-top: 70px;
+/* Elimina los emojis heredados si los hay */
+.pagina-formacion .educacion-subseccion:last-of-type .cert-list li::before {
+  content: none !important;
 }
 
-#tech-stack {
-  margin-top: 2rem;
+/* ====================================
+   ESTILOS PARTICULARES: PÁGINA TECH STACK
+==================================== */
+.pagina-tech-stack .section {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 40px rgba(255, 79, 135, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-main);
 }
 
-#tech-stack h3 {
-  font-family: var(--font-elegant);
-  font-size: 1.4rem;
-  color: var(--neon-cyan);
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#tech-stack ul {
-  list-style: square inside;
-  padding-left: 1rem;
+.pagina-tech-stack .tech-stack-titulo {
+  font-family: var(--font-alt); /* Orbitron */
+  font-size: 2.618rem;
+  text-align: justify;
+  color: var(--neon-pink);
   margin-bottom: 1.5rem;
 }
 
-#tech-stack li {
-  font-size: 0.95rem;
-  color: #dddddd;
-  line-height: 1.6;
-  margin-bottom: 0.4rem;
-  font-family: var(--font-base);
-}
-
-.section .tech-intro {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+.pagina-tech-stack .tech-intro {
+  font-family: var(--font-base); /* Comfortaa */
   font-size: 1rem;
   line-height: 1.7;
-  color: #f4f4f4;
+  text-align: justify;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-/* =============================
-   CONTACTO
-============================= */
-body.contacto {
-  padding-top: 70px;
+.pagina-tech-stack #tech-stack h3 {
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  font-size: 1.5rem;
+  color: var(--neon-cyan);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
+  font-weight: 600;
 }
 
-.contact-form {
+.pagina-tech-stack #tech-stack ul {
+  list-style: disc;
+  padding-left: 1.5rem; /* mejor alineado con otros listados */
+  margin-bottom: 1.5rem;
+}
+
+.pagina-tech-stack #tech-stack li {
+  font-family: var(--font-base); /* Comfortaa */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+/* CITA INSPIRADORA */
+.pagina-tech-stack .tech-quote {
+  margin-top: 3rem;
+  padding: 2.2rem;
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+  max-width: 1000px;
+  margin-inline: auto;
+  background: rgba(255, 79, 135, 0.5); /* translúcido suave */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 79, 135, 0.1);
+  border: none; /* 🔥 quita cualquier borde visible */
+}
+
+
+.pagina-tech-stack .tech-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-extra);
+  font-size: 1.1rem;
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+}
+.tech-intro-saira {
+  font-family: var(--font-extra); /* Saira Semi Condensed */
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  text-align: justify;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* ====================================
+   ESTILOS PARTICULARES: PÁGINA CONTACTO
+==================================== */
+
+.pagina-contacto .section {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 40px rgba(255, 79, 135, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: var(--text-main);
+  max-width: 900px;
+  margin: 2rem auto; /* ← antes decía: margin: 0 auto */
+}
+
+.pagina-contacto h1.sobre-mi-titulo {
+  font-family: var(--font-alt); /* Orbitron */
+  font-size: 2.618rem;
+  text-align: justify;
+  color: var(--neon-pink);
+  margin-bottom: 1rem;
+}
+
+.pagina-contacto .contacto-sub {
+  font-family: var(--font-base); /* Comfortaa */
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.pagina-contacto .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: 1.5rem;
 }
 
-.contact-form label {
-  font-weight: bold;
+.pagina-contacto .form-group label {
+  font-family: var(--font-extra); /* Saira */
+  font-size: 1rem;
   color: var(--neon-cyan);
-  font-family: var(--font-elegant);
+  margin-bottom: 0.3rem;
+  display: inline-block;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
+.pagina-contacto .form-group input,
+.pagina-contacto .form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
   border: none;
-  font-family: var(--font-base);
-  background-color: #222;
-  color: #fff;
-  box-shadow: inset 0 0 5px rgba(255,255,255,0.05);
+  font-family: var(--font-base); /* Comfortaa */
+  font-size: 1rem;
+  background: white;
+  color: #000;
 }
 
-.contact-form input,
-.contact-form textarea {
-  background-color: #fff; /* <-- antes era #222 */
-  color: #000;            /* texto negro para contraste */
-  padding: 0.75rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: var(--font-base);
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
-}
-
-
-.contact-form button {
+.pagina-contacto .btn-principal {
+  font-family: var(--font-extra); /* Saira */
+  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
   background-color: var(--neon-pink);
   color: #fff;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: var(--font-alt);
+  transition: background-color 0.3s ease;
+  text-transform: none;
 }
 
-.contact-form button:hover {
-  background-color: #ff6ea1;
+.pagina-contacto .btn-principal:hover {
+  background-color: var(--neon-purple);
 }
 
-/* Calendly */
-.calendly-link {
+.pagina-contacto .calendly-link {
   margin-top: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.calendly-link a {
+.pagina-contacto .calendly-link a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.05rem;
+  font-family: var(--font-extra); /* Saira */
+  font-size: 1rem;
   color: var(--neon-cyan);
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 0.7rem 1.3rem;
+  border: 2px solid var(--neon-cyan);
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: bold;
-  background-color: rgba(255,255,255,0.05);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
-.calendly-link a:hover {
-  background-color: rgba(93, 230, 255, 0.15);
-  box-shadow: 0 0 10px var(--neon-cyan);
+.pagina-contacto .calendly-link a:hover {
+  background-color: rgba(0, 255, 255, 0.05);
+  box-shadow:
+    0 0 15px rgba(0, 255, 255, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.5);
+  transform: scale(1.06);
 }
 
-/* Calendly icon optional if added */
-.calendly-link a::before {
-  content: "📅";
-  font-size: 1.2rem;
+.pagina-contacto .social-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.pagina-contacto .social-icons img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.pagina-contacto .social-icons img:hover {
+  transform: scale(1.2);
 }

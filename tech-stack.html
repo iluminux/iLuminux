@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Stack - iLuminux</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Estilos y fuentes -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+
+<body class="pagina-tech-stack">
+  <!-- Navegación -->
   <nav class="nav-container">
     <a href="index.html" class="logo-link">
-      <img src="img/iluminux-logo-temp.png" alt="Inicio" class="logo-nav">
+      <img src="img/iluminux-logo-temp.png" alt="Inicio" class="logo-nav" />
     </a>
-    <ul class="nav-links">
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="sobre-mi.html">Sobre mí</a></li>
       <li><a href="experiencia.html">Experiencia</a></li>
@@ -23,10 +32,15 @@
     </ul>
   </nav>
 
+  <!-- Contenido principal -->
   <main>
     <section class="section">
-      <h1 class="sobre-mi-titulo">🕹️ Tech Stack</h1>
-      <p class="tech-intro">Este es mi <strong>arsenal de juguetes digitales</strong> para echar a volar la creatividad, construyendo experiencias memorables y resolviedo problemas reales. Herramientas, tecnologías y enfoques que me acompañan en cada proyecto.</p>      
+      <h1 class="tech-stack-titulo">🕹️ Tech Stack</h1>
+      <p class="tech-intro-saira">
+        Cada ítem en esta bitácora representa un aprendizaje adquirido, una solución lograda o un desafío resuelto.  
+        Pero el mapa sigue expandiéndose: nuevas herramientas aparecen, y la evolución constante es parte del juego.
+      </p>      
+      
       <section id="tech-stack">
         <h3>👩‍💻 Desarrollo Front-End</h3>
         <ul>
@@ -89,12 +103,16 @@
           <li>Moodle, SIC de SENCE, Kahoot</li>
         </ul>
       </section>
-    </section>
+      <blockquote class="tech-quote">
+          “Todas las personas creativas quieren hacer lo inesperado”
+          <cite>– Hedy Lamarr</cite>        
+      </blockquote>
+          </section>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>✦ Hecho con el poder del prisma estelar ✦ © iLuminux 2025</p>
+  </footer>
 </body>
-
-<footer>
-  <p>✦ Hecho con el poder del prisma estelar ✦ © iLuminux 2025</p>
-</footer>
 </html>
-

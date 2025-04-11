@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre mí - iLuminux</title>
+  <title>iLuminux - Karina Hidalgo</title>
+
+  <!-- Estilos y fuentes -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/iluminux-favicon-temp.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Orbitron:wght@500;700&family=Saira+Semi+Condensed:wght@500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+
+<body class="pagina-sobre-mi">
   <!-- Navegación -->
   <nav class="nav-container">
     <a href="index.html" class="logo-link">
       <img src="img/iluminux-logo-temp.png" alt="Inicio" class="logo-nav" />
     </a>
-    <ul class="nav-links">
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">☰</button>
+
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="nav-link">Inicio</a></li>
       <li><a href="sobre-mi.html" class="nav-link active">Sobre mí</a></li>
       <li><a href="experiencia.html" class="nav-link">Experiencia</a></li>
@@ -27,36 +34,42 @@
   <!-- Contenido principal -->
   <main>
     <section class="section">
-      <h1 class="sobre-mi-titulo">👩‍🚀 Sobre mí</h1>
+      <div class="sobre-mi-layout reveal">
+        <h1 class="sobre-mi-titulo">👩‍🚀 Sobre mí</h1>
+    
+        <p>Hola, soy <span class="text-lumina">Karina Hidalgo</span> [nombre clave: Lumina], maga UX/UI y cibernauta geek de mente inquieta y curiosa.</p>
+    
+        <img src="img/ux-umbrella-iluminux.png" alt="Paraguas del UX por iLuminux" class="ux-banner" />
+    
+        <p>Desde <span class="text-iluminux">iLuminux</span> —mi laboratorio virtual— fusiono ciencia, diseño y tecnología para transmutar ideas y proyectos en experiencias deslumbrantes.</p>
+    
+        <div class="design-thinking-flow">
+          👁️❤️🧠 La experimentación inicia con la observación empática y el pensamiento científico.<br><br>
+          🔎🔭🔬 Luego, trabajo en la definición del problema, levantando una investigación previa que me permita obtener datos para analizar, evaluar y tomar decisiones estratégicas orientadas a la solución.<br><br>
+          💡📝📐 Idealizo escribiendo hipótesis y fórmulas UX aún sin nombre, jugando con formas, boceteando en círculos de transmutación, hasta que una chispa de creatividad posibilita...<br><br>
+          ⚗️🧪✨ La creación de prototipos, usando la tecnología como catalizador.<br><br>
+          🥼👓💫 Y finalmente, testeo para validar el impacto del encanto digital en la experiencia de los usuarios: escuchando, observando, iterando…
+        </div>
 
-      <p>Hola, soy <span class="text-lumina">Lumina</span>, diseñadora UX/UI, alquimista digital y visionaria pragmática del <span class="text-iluminux">laboratorio iLuminux</span>.</p> Desde este rincón del ciberespacio combino ciencia, intuición y tecnología para crear experiencias significativas, accesibles y con alma.</p>
-      <br>
-      <img src="img/ux-umbrella-iluminux.png" alt="Paraguas del UX por iLuminux" class="ux-banner" />
-      <br>
-      <p class="frase-final"> Creo en el diseño que observa el universo del usuario, experimenta sin miedo y despega hacia soluciones que impactan. 🔭✨🚀
-        <br><br><span class="flicker-glow">“Mis clientes son las constelaciones, y las estrellas... mis usuarios.”</span> 
-      </p>
-
-      <!-- Video al final con aire -->
-      <div class="video-elevator">
-        <div class="responsive-video">
-          <iframe src="https://www.youtube.com/embed/mw638RoYjO8?si=_865zykPZN4G24tD" title="Elevator Pitch - iLuminux" allowfullscreen></iframe>
+        <!-- Frase final centrada -->
+        <p class="flicker-glow frase-final">🚀 “Mis clientes son las constelaciones, y las estrellas... mis usuarios.”✨</p>
+    
+        <!-- Video -->
+        <div class="video-elevator">
+          <div class="responsive-video">
+            <iframe src="https://www.youtube.com/embed/mw638RoYjO8?si=_865zykPZN4G24tD" title="Elevator Pitch - iLuminux" allowfullscreen></iframe>
+          </div>
+        </div>
+    
+        <!-- Redes sociales -->
+        <div class="social-icons">
+          <a href="https://www.behance.net/iLuminux" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
+          <a href="https://www.linkedin.com/in/iLuminux/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+          <a href="https://www.facebook.com/iluminux.cl" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/iLuminux.cl" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+          <a href="https://www.youtube.com/@iLuminux_cl" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
+          <a href="https://github.com/iLuminux" target="_blank"><img src="img/github.svg" alt="GitHub"></a>
         </div>
       </div>
-      <div class="social-icons">
-        <a href="https://www.behance.net/iLuminux" target="_blank"><img src="img/behance.svg" alt="Behance"></a>
-        <a href="https://www.linkedin.com/in/iLuminux/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://www.facebook.com/iluminux.cl" target="_blank"><img src="img/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/iLuminux.cl" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
-        <a href="https://www.youtube.com/@iLuminux_cl" target="_blank"><img src="img/youtube.svg" alt="YouTube"></a>
-        <a href="https://github.com/iLuminux" target="_blank"><img src="img/github.svg" alt="GitHub"></a>
-      </div>
-    </div>
     </section>
-  </main>
-</body>
-
-<footer>
-  <p>✦ Hecho con el poder del prisma estelar ✦ © iLuminux 2025</p>
-</footer>
-</html>
+    

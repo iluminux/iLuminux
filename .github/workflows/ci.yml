@@ -22,7 +22,7 @@ jobs:
     - name: Instalar dependencias
       run: npm install
 
-    - name: Instalar Playwright
+    - name: Instalar Playwright y navegadores
       run: npx playwright install --with-deps
 
     - name: Ejecutar pruebas

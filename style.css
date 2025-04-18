@@ -29,19 +29,20 @@
 }
 
 body {
-  font-family: var(--font-base);
+  font-family: var(--font-base); /* Comfortaa */
   background: url('img/iluminux-background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--text-main);
   min-height: 100vh;
   padding-top: 90px;
   overflow-x: hidden;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 0.9vw + 0.3rem, 0.95rem); /* 👈 Ajuste responsivo */
+  line-height: 1.6;
 }
 
 p, li {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: inherit; /* heredan del body */
+  line-height: inherit;
 }
 
 /* ====================================
@@ -248,7 +249,7 @@ footer {
   font-family: var(--font-alt);
   font-size: 2.5rem;
   color: var(--neon-pink);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .bienvenida h2 {
@@ -256,6 +257,7 @@ footer {
   font-size: 1.618rem;
   color: var(--neon-cyan);
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .bienvenida-sub {
@@ -636,7 +638,7 @@ footer {
 
 .pagina-tech-stack #tech-stack li {
   font-family: var(--font-base); /* Comfortaa */
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-main);
   margin-bottom: 0.5rem;
@@ -799,4 +801,13 @@ footer {
 
 .pagina-contacto .social-icons img:hover {
   transform: scale(1.2);
+}
+
+.pagina-sobre-mi p,
+.pagina-experiencia p,
+.pagina-formacion p,
+.pagina-contacto p {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
 }
